@@ -3,17 +3,15 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard Admin') }}
         </h2>
-        <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="px-4 py-2 bg-red-600 text-white text-sm rounded-md hover:bg-red-700">
-                    Logout
-                </button>
-            </form>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+                <a href="{{ route('admin.users.index') }}" 
+                    class="inline-block mt-6 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700">
+                    Kelola User
+                </a>
                     <h3 class="text-lg font-semibold mb-4">Statistik Pengguna</h3>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -27,9 +25,13 @@
                     </div>
                     <div class="bg-yellow-100 p-4 rounded-lg">
                         <p class="text-sm text-yellow-800">User Biasa</p>
-                        <p class="text-3xl font-bold text-yellow-900">{{ $totalRegularUsers
-}}</p>
+                        <p class="text-3xl font-bold text-yellow-900">{{ $totalRegularUsers}}</p>
                     </div>
+                </div>
+                <a href="{{ route('admin.users.index') }}"
+                    class="inline-block mt-6 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700">
+                        Kelola User
+                </a>
                 </div>
             </div>
         </div>
